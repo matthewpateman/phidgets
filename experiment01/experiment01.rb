@@ -66,14 +66,19 @@ begin
 	newText = checkFile
 
 	if newText != text
+	puts "***** A new message has been saved on the server *****"
 
+	puts "***** DISPLAYING NEW MESSAGE *****"
 		
 		lcd.screens[0].rows[0].display_string = newText[0..19]
+		puts "Row 1 will display: " + newText[0..19]
 
 		if newText.length > 19
 			lcd.screens[0].rows[1].display_string = newText[20..39]
+			puts "Row 2 will display: " + newText[20..39]
 		else
 			lcd.screens[0].rows[1].display_string = ""
+			puts "Row 2 will display: "
 		end
 
 		text = newText
