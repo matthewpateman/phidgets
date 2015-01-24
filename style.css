@@ -10,10 +10,21 @@
 
 	strong {font-weight: 400;}
 
-	header {height: 80px; background: #0D47A1; color: #FFF;  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);}
+	header {height: 80px; background: #0D47A1; color: #FFF; position: fixed; top:0; width: 100%; z-index: 3; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);}
 	
 	header > .wrapper > .title {padding: 0 10px; line-height: 80px; font-size: 22px; font-weight: 300; position: relative; float: left;
       }
+
+    header > .wrapper > .title > .icon {
+    	display: none;
+    	width:40px;
+    	height: 80px;
+    	background: url('data:image/svg+xml;utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 80" enable-background="new 0 0 40 80" xml:space="preserve"><path fill="#FFFFFF" d="M31,54H9V40H4.6L20,24.6L35.4,40H31V54z M11,52h18V38h1.6L20,27.4L9.4,38H11V52z"/></svg>');
+    	background-repeat: no-repeat;
+
+
+    }
+
 
     header > .wrapper > .title2 {padding: 0 10px 0 50px; line-height: 80px; font-size: 22px; font-weight: 300; position: relative; float: left;
     	background: url('data:image/svg+xml;utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 80" enable-background="new 0 0 40 80" xml:space="preserve"><polygon fill="#FFFFFF" points="13.7,53.8 12.7,52.9 25.5,40.1 12.6,27.1 13.5,26.2 27.4,40.1 "/></svg>');
@@ -21,19 +32,28 @@
     	font-weight: 100;
 }
 	
-	.card {background: #FFF; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); margin: 10px; font-size: 14px; line-height: 20px; width: 300px; padding: 16px; box-sizing:border-box;
+	.card {
 
-    -webkit-transition: box-shadow 0.2s;  /* For Safari 3.1 to 6.0 */
-    transition: box-shadow 0.2s;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
 
+ 	display: inline-block;
+    background: white;
+    box-sizing: border-box;
+      width: 300px;
+      height: 100px;
+      margin: 10px;
+      padding: 16px;
+      border-radius: 2px;
+
+      transition: box-shadow 0.3s;
 
 	}
 
 	.link { cursor: pointer;}
 
-	.card:hover {box-shadow: rgba(0, 0, 0, 0.239216) 0px 12px 15px 0px; }
+ 	.card:hover {box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3);}
 
-	.padding {padding-top: 16px; }
+	.padding {padding-top: 96px; }
 
 	.experiments {height: 240px; float: left; color: #FFF;      position: relative;
       display: inline-block;}
@@ -47,18 +67,27 @@
       color: #FFF;
     }
 
+
+        	
+
 @media screen and (min-width: 960px) {
 
         	.wrapper {width:960px; margin: 0 auto; box-sizing:border-box;}
+
+        	
 }
 
 @media screen and (min-width: 640px) and (max-width: 959px) {
 
         	.wrapper {width:640px; margin: 0 auto; box-sizing:border-box;}
+
 }
 
 
 @media screen and (max-width: 639px) {
 
-        	.wrapper {width:300px; margin: 0 auto; box-sizing:border-box;}
+        	.wrapper {width:320px; margin: 0 auto; box-sizing:border-box;}
+
+        	.header > .wrapper > .title > .icon {display: block;}
+        	.header > .wrapper > .title > .text {display: none;}
 }

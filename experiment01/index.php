@@ -51,7 +51,9 @@ if($_POST['addition'] != "")
 <body>
 		<header>
 		<div class="wrapper">
-			<div class="title link" onclick="loadPage('http://www.matthewpateman.com/phidgets');">Phidgets Experiments
+			<div class="title link" onclick="loadPage('http://www.matthewpateman.com/phidgets');">
+				<div class="icon"></div>
+				<div class="text">Phidgets Experiments</div>
 				<paper-ripple fit></paper-ripple>
 			</div>
 			<div class="title2">Experiment 1
