@@ -50,7 +50,7 @@ sleep 1
 if(lcd.attached?)
 
 def checkFile
-	url = URI.parse('http://www.matthewpateman.com/writing/file.txt')
+	url = URI.parse('http://www.matthewpateman.com/phidgets/experiment01/file.txt')
 	req = Net::HTTP::Get.new(url.to_s)
 	res = Net::HTTP.start(url.host, url.port) {|http|
   		http.request(req)
