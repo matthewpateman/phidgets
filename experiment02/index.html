@@ -1,0 +1,63 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		  <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+	<header>
+		<div class="wrapper">
+			<div class="title link" onclick="loadPage('http://www.matthewpateman.com/phidgets');">
+				<div class="icon"></div>
+				<div class="text">Phidgets Experiments</div>
+				<paper-ripple fit></paper-ripple>
+			</div>
+			<div class="title2">Experiment 2
+			</div>
+		</div>
+	</header>
+		<div class="wrapper padding">
+<ul id="list">
+</ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+	var downloadedText = "";
+
+	window.setInterval(function(){
+  $.ajax({
+            url : "file.txt",
+            dataType: "text",
+            success : function (data) {
+
+            	if (downloadedText != data) {
+            		console.log(downloadedText)
+            		$("#list").append('<li>' + data + '</li>');
+            		downloadedText = data;
+            		console.log("updated " + downloadedText)
+
+            	}
+            	else {
+            		console.log("no change");
+            	}
+                
+            }
+        });
+
+}, 300);
+
+}); 
+
+function loadPage(url) {
+	redirectTime = "150";
+	redirectURL = url;
+	setTimeout("location.href = redirectURL;",redirectTime);
+}
+
+</script>
+</body>
