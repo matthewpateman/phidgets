@@ -49,7 +49,8 @@ if($_POST['addition'] != "")
 		<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-		<header>
+
+	<header>
 		<div class="wrapper">
 			<div class="title link" onclick="loadPage('http://www.matthewpateman.com/phidgets');">
 				<div class="icon"></div>
@@ -63,15 +64,16 @@ if($_POST['addition'] != "")
 	
 	<div class="wrapper padding">
 
+		<div class="wrapper card">
+			<p>The device currently displays:</p>
+			<p><strong><?php echo $text; ?></strong></p>
+		</div>
 
-	<div class="wrapper card">
-		<p>The device currently displays:</p>
-		<p><strong><?php echo $text; ?></strong></p>
+		<form action="<?=$PHP_SELF?>" method="post" class="card wrapper"> 
+			<input type="text" name="addition"/> 
+			<input type="submit"/> 
+		</form>
 	</div>
-	<form action="<?=$PHP_SELF?>" method="post" class="card wrapper"> 
-		<input type="text" name="addition"/> 
-		<input type="submit"/> 
-	</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
