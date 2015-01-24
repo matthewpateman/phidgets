@@ -39,18 +39,18 @@ if($_POST['addition'] != "")
 }
 
 ?> 
-
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-		  <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="../style.css">
+	
+	<link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
 
-	<header>
+	<header class="blue">
 		<div class="wrapper">
 			<div class="title link" onclick="loadPage('http://www.matthewpateman.com/phidgets');">
 				<div class="icon"></div>

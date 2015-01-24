@@ -11,14 +11,17 @@ if($_POST['chip'] != "")
 	$file = fopen($fn, "w+"); 
 	$size = filesize($fn); 
 	
+	$noSpecialCharacters = htmlspecialchars($_POST['chip']);
 
-	$addition = $_POST['chip'] ." ". date('Y-m-d H:i:s');
+	$addition = "<strong>Chip ". $_POST['chip'] ."</strong> was touched in at ". date('H:i:s') ." on ". date('j F Y');
 
 	// remove special characters
-	$noSpecialCharacters = htmlspecialchars($addition);
+	
+
+
 
 	// trim input to 40 characters
-	$final = substr($noSpecialCharacters, 0, 40);
+	$final = substr($noSpecialCharacters, 0, 200);
 
 
 	fwrite($file, $addition); 
