@@ -44,24 +44,24 @@ if($_POST['addition'] != "")
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-	<style>
-	/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-	/* end of reset */
-
-	body {background: #ECEFF1; font-family: 'Roboto'; font-weight: 300;}
-
-	strong {font-weight: 400;}
-
-	header {height: 56px; background: #2196F3; color: #FFF; line-height: 24px; font-size: 20px; font-weight: 400;}
-	
-	.wrapper {width:300px; padding:16px; margin: 0 auto; box-sizing:border-box;}
-	
-	.card {background: #FFF; border-radius: 2px; box-shadow: 0px 0px 4px rgba(0,0,0,0.3); margin: 16px auto; font-size: 14px; line-height: 20px;}
-	</style>
+		  <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-	<header><div class="wrapper">Experiment 1</div></header>
+		<header>
+		<div class="wrapper">
+			<div class="title link" onclick="loadPage('http://www.matthewpateman.com/phidgets');">Phidgets Experiments
+				<paper-ripple fit></paper-ripple>
+			</div>
+			<div class="title2">Experiment 1
+			</div>
+		</div>
+	</header>
+	
+	<div class="wrapper padding">
+
+
 	<div class="wrapper card">
 		<p>The device currently displays:</p>
 		<p><strong><?php echo $text; ?></strong></p>
@@ -70,5 +70,18 @@ if($_POST['addition'] != "")
 		<input type="text" name="addition"/> 
 		<input type="submit"/> 
 	</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+// delay to allow for page ripple effect to finish.
+function loadPage(url) {
+	redirectTime = "150";
+	redirectURL = url;
+	setTimeout("location.href = redirectURL;",redirectTime);
+}
+
+</script>
+
 </body>
 </html>

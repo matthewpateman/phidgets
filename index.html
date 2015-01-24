@@ -1,25 +1,32 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="style.css">
+		  <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header><div class="wrapper title">Phidgets Experiments</div></header>
-	<div class="wrapper">
+	<header>
+		<div class="wrapper">
+			<div class="title">Phidgets Experiments
+			</div>
+
+		</div>
+	</header>
+	
+	<div class="wrapper padding">
 
 
-	<div class="experiments card" style="background:-webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(experiment01.jpg); background-size:100%;" onclick="loadPage('experiment01');">
+	<div class="experiments card link" style="background:-webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(experiment01.jpg); background-size:100%;" onclick="loadPage('experiment01');">
 		
 		<div class="content">
 			<div class="title">Experiment 1</div>
 			<div>Post a message online and have it display on the LCD display.</div>
 		</div>
-		<paper-ripple class="recenteringTouch" fit></paper-ripple>
+		<paper-ripple fit></paper-ripple>
 	</div>
 
-<div class="experiments card" style="background:-webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(experiment02.jpg); background-size:100%;" onclick="loadPage('experiment02');">
+<div class="experiments card link" style="background:-webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(experiment02.jpg); background-size:100%;" onclick="loadPage('experiment02');">
 		
 		
 		<div class="content">
@@ -29,7 +36,7 @@
 		<paper-ripple fit></paper-ripple>
 	</div>
 
-<div class="experiments card" style="background:-webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);" onclick="loadPage('experiments02');">
+<div class="experiments card" style="background:-webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);">
 		
 		<div class="content">
 			<div class="title">Experiment 3</div>
