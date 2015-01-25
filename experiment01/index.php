@@ -63,16 +63,20 @@ if($_POST['addition'] != "")
 	</header>
 	
 	<div class="wrapper padding">
-
-		<div class="wrapper card">
+	
+	<ul id="list">
+		<li>
 			<p>The device currently displays:</p>
 			<p><strong><?php echo $text; ?></strong></p>
-		</div>
-
-		<form action="<?=$PHP_SELF?>" method="post" class="card wrapper"> 
+		</li>
+		<li>
+			<form action="<?=$PHP_SELF?>" method="post"> 
 			<input type="text" name="addition"/> 
 			<input type="submit"/> 
 		</form>
+		</li>
+	</ul>
+		
 	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
