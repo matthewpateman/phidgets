@@ -77,7 +77,7 @@
 
 	.link {cursor: pointer;}
 
- 	.card_link:hover {box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3);}
+ 	.card_link:hover {box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3); cursor: pointer;}
 
 	.padding {padding-top: 96px; }
 
@@ -196,10 +196,15 @@ form div {
       outline:none;
       border: none;
       color: #FFF;
-      background: #1976D2;
+      background: #0D47A1;
       float: left;
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
       border-radius: 2px;
+      transition: box-shadow 0.3s;
+  }
+
+  form input[type='submit']:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
   }
 
   form div select {
