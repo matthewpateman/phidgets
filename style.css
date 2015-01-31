@@ -8,11 +8,13 @@
 
 }
 
+.clear {clear: both; height: 0px; width: 0;}
+
 	strong {font-weight: 400;}
 
-  .blue {background: #0D47A1;}
-  .green {background: #009688;}
-  .yellow {background: #F9A825;}
+  header.blue {background: #0D47A1;}
+  header.green {background: #009688;}
+  header.yellow {background: #F9A825;}
 
 	header {height: 80px; color: #FFF; position: fixed; top:0; width: 100%; z-index: 3; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);}
 	
@@ -46,6 +48,11 @@
     padding: 16px;
     border-radius: 2px;
     transition: box-shadow 0.3s;
+
+}
+
+.wrapper {    transition: width 0.2s;
+              transition-timing-function: ease;
 }
 
   .project {
@@ -107,6 +114,111 @@
    
   #list li:last-child {border-bottom: none;}
 
+
+h1{font-size: 20px; font-weight: 300; padding-bottom: 18px;}
+
+h1.yellow {color: #F9A825;}
+h1.blue {color:#1976D2;}
+
+
+
+form div {
+      font-family: 'Open Sans', sans-serif;
+      width:100%;
+      height:50px;
+      padding: 0;
+      top:-10px;
+      
+      position:relative;
+      box-sizing:border-box;
+    }
+
+    form div:last-child {
+      border-bottom: none;
+    }
+
+  form div label {
+    width:100%;
+      display:block;
+      color: #FFF;
+      position:absolute;
+      float:none;
+      top:10px;
+      font-size:12px;
+      font-weight:600;
+      margin:0;
+      padding:0;
+    
+      -webkit-transition: all 0.2s ease-out;
+         -moz-transition: all 0.2s ease-out;  
+        transition: all 0.2s ease-out;
+
+  }
+
+  form div .delete {
+    width:100%;
+    text-align: center;
+  }
+
+  form div.hasContent label, .form div label.show {
+      top:5px;
+      color: rgba(0,0,0,1);
+  }
+
+  form div input {
+    float: none;
+    border: none;
+      display:block;
+      position:absolute;
+      font-size:14px;
+      padding: 25px 0px 5px 0px !important;
+    margin: 0 !important;
+      width:100%;
+      box-sizing:border-box;
+      font-weight:400;
+      font-family: 'Open Sans', sans-serif;
+      outline:none;
+      color:#333;
+      background: none;
+  }
+
+  form input[type='submit'] {
+    line-height: 24px;
+    font-family: 'Open Sans';
+      display:block;
+      position:relative;
+      padding:10px !important;
+      margin: 10px 0 0 !important;
+      font-size:14px;
+      box-sizing:border-box;
+      width:auto;
+      box-sizing:border-box;
+      outline:none;
+      border: none;
+      color: #FFF;
+      background: #1976D2;
+      float: left;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+      border-radius: 2px;
+  }
+
+  form div select {
+    float: none;
+      height: 49px;
+      background: rgba(0,0,0,0) url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve"><polygon fill="#333333" points="7.5,11.83 5,7.5 2.5,3.17 7.5,3.17 12.5,3.17 10,7.5 "/></svg>') no-repeat calc(100% - 10px) center;
+    -webkit-appearance: none;
+      font-size:16px;
+      border:none;
+      padding:20px 10px 7px 10px;
+      margin: 0 0 0 -10px !important;
+      border-radius: 0;
+      width:100%;
+      box-sizing:border-box;
+      font-weight:400;
+      font-family: 'Open Sans', sans-serif;
+      outline:none;
+      color:#333;
+  }
 
 
 @media screen and (min-width: 960px) {

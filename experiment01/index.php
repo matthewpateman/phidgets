@@ -74,13 +74,19 @@ if($_POST['addition'] != "")
 	
 	<ul id="list">
 		<li>
+			<h1 class="blue">Current Text</h1>
 			<p>The device currently displays:</p>
 			<p><strong><?php echo $text; ?></strong></p>
 		</li>
 		<li>
-			<form action="<?=$PHP_SELF?>" method="post"> 
-			<input type="text" name="addition"/> 
+			<h1 class="blue">Update Text</h1>
+			<form action="<?=$PHP_SELF?>" method="post">
+				<div>
+					<label for="addition">Enter text</label>
+			<input id="addition" type="text" name="addition" placeholder="Enter text"/> 
+				</div>
 			<input type="submit"/> 
+			<div class="clear"></div>
 		</form>
 		</li>
 	</ul>
@@ -96,6 +102,42 @@ function loadPage(url) {
 	redirectURL = url;
 	setTimeout("location.href = redirectURL;",redirectTime);
 }
+
+$(document).ready(function() {
+
+ listener();
+ listener2();
+
+});
+
+var listener = function() {
+    document.addEventListener('input', function(e) {
+        if (e.target.value != "") {
+            e.target.parentNode.className = "hasContent";
+        }
+        else {
+            e.target.parentNode.className = "";
+        }
+    });
+}
+
+
+var listener2 = function() {
+    console.log("loaded");
+    
+    inputs = document.getElementsByTagName('input');
+    console.log(inputs);
+    for (i = 0; i < inputs.length; ++i) {
+        if (inputs[i].value != "") {
+            inputs[i].parentNode.className = "hasContent";
+        }
+        else {
+            inputs[i].parentNode.className = "";  
+        }
+    }
+}
+
+
 
 </script>
 
