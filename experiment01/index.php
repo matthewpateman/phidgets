@@ -64,7 +64,7 @@ if($_POST['addition'] != "")
 	
 	<div class="wrapper padding">
 
-					<div class="project card">				
+					<div class="experiment card">				
 				<div class="background" style="background:url(../experiment01.jpg); background-repeat: no-repeat; background-size: 100%; background-position:50% 50%;"></div>
 				<div class="image" style="background:url(../experiment01.jpg); background-size:100%"></div>
 				<idv class="text">
@@ -72,7 +72,7 @@ if($_POST['addition'] != "")
 					<div>Post a message online and have it display on the LCD display.</div>
 				</div>	
 	
-	<ul id="list">
+	<ul id="list" class="shadow1">
 		<li>
 			<h1 class="blue">Current Text</h1>
 			<p>The device currently displays:</p>
